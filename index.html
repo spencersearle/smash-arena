@@ -11,10 +11,17 @@
     <canvas id="game" width="1280" height="720"></canvas>
   </div>
   <p id="hint">
-    P1: <b>A/D</b> move · <b>W</b> jump · <b>S</b> fast-fall · <b>F</b> light · <b>G</b> heavy &nbsp;|&nbsp;
-    P2: <b>←/→</b> move · <b>↑</b> jump · <b>↓</b> fast-fall · <b>.</b> light · <b>/</b> heavy
-    &nbsp;|&nbsp; <b>Enter</b> start/restart
+    P1: <b>A/D</b> move · <b>W</b> jump · <b>F</b> attack · <b>G</b> special · <b>E</b> shield
+    &nbsp;|&nbsp;
+    P2: <b>←/→</b> move · <b>↑</b> jump · <b>/</b> attack · <b>.</b> special · <b>,</b> shield
+    &nbsp;|&nbsp; <b>Enter</b> select · <b>Esc</b> back/pause
   </p>
-  <script src="game.js"></script>
+
+  <!-- Load order matters: data defines the namespace everything else hangs off. -->
+  <script src="data.js"></script>
+  <script src="audio.js"></script>
+  <script src="engine.js"></script>
+  <script src="ui.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
